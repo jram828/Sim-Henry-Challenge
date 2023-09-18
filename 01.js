@@ -7,14 +7,19 @@
 function soloNumeros(array) {
   // La funcion llamada 'soloNumeros' recibe como argumento un arreglo de enteros y strings llamado 'array'.
   // Debe devolver un arreglo con solo los enteros.
-  // Ej: 
+  // Ej:
   // soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]
 
   // Tu código aca:
-
+  newarray = [];
+  for (i = 0; i < array.length; i++) {
+    if (!isNaN(array[i])) {
+      newarray.push(array[i]);
+    }
+  }
+  return newarray;
 }
-
+console.log(soloNumeros([1, "Henry", 2]));
 // No modifiques nada debajo de esta linea //
 
-
-module.exports = soloNumeros
+module.exports = soloNumeros;
